@@ -1,4 +1,4 @@
- .player-bar {
+.player-bar {
      position: fixed;
      bottom: 0;
      left: 0;
@@ -9,9 +9,9 @@
  }
  
 .player-bar a {
-    font-size: 1.1rem;
-    vertical-align: middle;
-}
+     font-size: 1.1rem;
+     vertical-align: middle;
+ }
 
  .player-bar a,
  .player-bar a:hover {
@@ -37,16 +37,16 @@
      text-align: left;
      padding-right: 1rem;
  }
-
- .player-bar .main-controls .previous {
-    margin-right: 16.5%;
-}
-
-.player-bar .main-controls .play-pause {
-    margin-right: 15%;
-    font-size: 1.6rem;
-}
  
+.player-bar .main-controls .previous {
+     margin-right: 16.5%;
+ }
+ 
+ .player-bar .main-controls .play-pause {
+     margin-right: 15%;
+     font-size: 1.6rem;
+ }
+
  .player-bar .currently-playing {
      width: 50%;
      text-align: center;
@@ -76,9 +76,8 @@
  .player-bar .currently-playing .artist-song-mobile {
      display: none;
  }
- 
 
- .seek-control {
+.seek-control {
      position: relative;
      font-size: 0.8rem;
  }
@@ -104,7 +103,7 @@
  
  .seek-bar .fill {
      background: white;
-     width: 69%;
+     width: 36%;
      height: 0.25rem;
      border-radius: 2px;
  }
@@ -114,7 +113,7 @@
      height: 0.5rem;
      width: 0.5rem;
      background: white;
-     left: 69%;
+     left: 36%;
      top: 50%;
      /* #1 */
      margin-left: -0.25rem;
@@ -136,4 +135,53 @@
  .player-bar .volume {
      width: 25%;
      text-align: right;
+ }
+
+
+ .player-bar .volume .icon {
+     font-size: 1.1rem;
+     display: inline-block;
+     vertical-align: middle;
+ }
+ 
+ .player-bar .volume .seek-bar {
+     display: inline-block;
+     width: 5.75rem;
+     vertical-align: middle;
+ }
+
+
+ @media (max-width: 40rem) {
+     .player-bar {
+         padding: 1rem;
+         background: rgba(0,0,0,0.6);
+     }
+ 
+     .player-bar .main-controls,
+     .player-bar .currently-playing,
+     .player-bar .volume {
+         display: block;
+         margin: 0 auto;
+         padding: 0;
+         width: 100%;
+         text-align: center;
+     }
+     
+     .player-bar .main-controls,
+     .player-bar .volume {
+         min-height: 3.5rem;
+     }
+     
+     .player-bar .currently-playing {
+         min-height: 2.5rem;
+     }
+      
+     .player-bar .artist-name,
+     .player-bar .song-name {
+         display: none;
+     }
+ 
+     .player-bar .artist-song-mobile {
+         display: block;
+     }
  }
